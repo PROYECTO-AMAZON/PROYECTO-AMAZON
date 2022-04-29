@@ -1,0 +1,5 @@
+{
+    "appService.preDeployTask": "publish-release",
+    "appService.deploySubpath": "bin\\Release\\net6.0\\publish",
+    "appService.defaultWebAppToDeploy": "/subscriptions/58fab515-086e-4a55-a683-c523b22e480f/resourceGroups/appsvc_windows_centralus/providers/Microsoft.Web/sites/PROYECTO-AMAZON"
+}
