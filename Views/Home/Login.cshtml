@@ -1,0 +1,28 @@
+@{
+    ViewData["Title"] = "Iniciar sesión";
+}
+<body style="background-image:url(img/fondo.png); background-size: 100%;">
+<div class="row" style="margin-top: 40px; margin-bottom: 30px;">
+    <div class="col-3"></div>
+    <div class="col-6">
+        <div style="background-color: #FE914B; border-radius: 15px; padding-bottom: 10px; opacity: 86%;">
+            <h2 style="font-weight: 600; text-align: center; padding-top: 15px; padding-bottom: 15px;">Acceder al sitio</h2>
+            <form action="post">
+                <div class="form-group" style="text-align: center;">
+                    <label for="">Email:</label>
+                    <input type="text">
+                </div>
+                <div class="form-group" style="text-align: center;">
+                    <label for="">Contraseña:</label>
+                    <input type="text">
+                </div>
+                <div style="text-align: center; margin-top: 15px;">
+                    <a asp-controller="Home" asp-action="Login"><button type="button" class="btn btn-dark" style="color: #FE914B; border-radius: 12px;">INGRESAR</button></a>
+                </div>
+            </form>
+            <hr>
+            <p style="text-align: center;">¿No Tienes Una Cuenta? <a asp-controller="Home" asp-action="Form">Regístrate Aquí</a>.</p>
+        </div>
+    </div>
+    <div class="col-3"></div>
+</div>
