@@ -9,6 +9,9 @@
     <div class="col-6">
         <div style="background-color: #FE914B; border-radius: 15px; padding-bottom: 10px; opacity: 86%;">
             <h2 style="font-weight: 600; text-align: center; padding-top: 15px; padding-bottom: 15px;">Acceder al sitio</h2>
+            <div class="text-center">
+                <img src="~/img/logo_amazon.png" alt="" style="width: 90px; height: auto; border-radius: 50%; padding-top: 10px; padding-bottom: 10px;">
+            </div>
             <form action="post">
                 <div class="form-group" style="padding-left: 30px; padding-right: 30px;">
                     <label asp-for="email"></label>
@@ -18,7 +21,7 @@
                     <label asp-for="contrasena"></label>
                     <input type="text" class="form-control">
                 </div>
-                <div style="text-align: center;">
+                <div style="text-align: center; padding-top: 10px; padding-bottom: 10px;">
                     <a asp-controller="Home" asp-action="Principal"><button type="button" class="btn btn-dark" style="color: #FE914B; border-radius: 12px; margin-top: 20px;">INGRESAR</button></a>
                 </div>
             </form>
