@@ -39,19 +39,23 @@
                             <input type="date" asp-for="fechaNac" class="form-control">
                         </div>
                         <div class="form-group" style="padding-top: 15px; padding-left: 10px;">
-                            <label asp-for="celular"></label>
-                            <input type="text" asp-for="celular" class="form-control">
+                            <label asp-for="dni"></label>
+                            <input type="text" asp-for="dni" class="form-control">
                         </div>
                         <div class="form-group" style="padding-top: 15px; padding-bottom: 20px; padding-left: 10px;">
                             <label asp-for="genero"></label>
                             <div>
                                 <label><input asp-for="genero" type="radio" name="genero" value="M"> M</label>
-                                <label><input asp-for="genero" type="radio" name="genero" value="F"> F</label>
+                                <label style="padding-left: 5px;"><input asp-for="genero" type="radio" name="genero" value="F"> F</label>
                             </div>
                         </div>
                     </div>
                     <div class="col-6 container" style="padding-top: 15px;">
                         <div class="form-group" style="padding-top: 20px; padding-right: 15px;">
+                            <label asp-for="celular"></label>
+                            <input type="text" asp-for="celular" class="form-control">
+                        </div>
+                        <div class="form-group" style="padding-top: 15px; padding-right: 15px;">
                             <label asp-for="departamento"></label>
                             <input type="text" asp-for="departamento" class="form-control">
                         </div>
