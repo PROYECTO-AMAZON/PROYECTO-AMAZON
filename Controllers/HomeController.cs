@@ -63,7 +63,7 @@ public class HomeController : Controller
         var result = _sim.PasswordSignInAsync(correo, password, false, false).Result;
 
         if (result.Succeeded) {
-            return RedirectToAction("Index", "Home");
+            return RedirectToAction("Principal");
         } 
 
         ModelState.AddModelError("", " Email y/o contraseña incorrectos");
@@ -75,7 +75,7 @@ public class HomeController : Controller
     {
         await _sim.SignOutAsync();
 
-        return RedirectToAction("home", "home");
+        return RedirectToAction("Login");
     } 
 
     public IActionResult Principal()

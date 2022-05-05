@@ -19,7 +19,7 @@
     <div class="col-10">
 
         <div style="background-color: #FE914B; border-radius: 15px; padding-bottom: 10px; margin-bottom: 25px; opacity: 86%;" class="container">
-            <form action="" method="">
+            <form action="" method="post">
                 <div class="row">
                     <div class="col-6 container" style="padding-top: 15px;">
                         <div class="form-group" style="padding-top: 20px; padding-left: 10px;">
@@ -51,50 +51,32 @@
                         </div>
                     </div>
                     <div class="col-6 container" style="padding-top: 15px;">
-                        <div class="form-group" style="padding-top: 20px; padding-right: 10px;">
+                        <div class="form-group" style="padding-top: 20px; padding-right: 15px;">
                             <label asp-for="departamento"></label>
                             <input type="text" asp-for="departamento" class="form-control">
                         </div>
-                        <div class="form-group" style="padding-top: 15px; padding-right: 10px;">
+                        <div class="form-group" style="padding-top: 15px; padding-right: 15px;">
                             <label asp-for="provincia"></label>
                             <input type="text" asp-for="provincia" class="form-control">
                         </div>
-                        <div class="form-group" style="padding-top: 15px; padding-right: 10px;">
+                        <div class="form-group" style="padding-top: 15px; padding-right: 15px;">
                             <label asp-for="distrito"></label>
                             <input type="text" asp-for="distrito" class="form-control">
                         </div>
-                        <div class="form-group" style="padding-top: 15px; padding-right: 10px;">
+                        <div class="form-group" style="padding-top: 15px; padding-right: 15px;">
                             <label asp-for="email"></label>
                             <input type="text" asp-for="email" class="form-control">
                         </div>
-                        <div class="form-group" style="padding-top: 15px; padding-right: 10px;">
+                        <div class="form-group" style="padding-top: 15px; padding-right: 15px;">
                             <label asp-for="contrasena"></label>
-                            <input type="text" asp-for="contrasena" class="form-control">
+                            <input type="password" asp-for="contrasena" class="form-control">
                         </div>
                         <div style="text-align: center; padding-top: 25px;">
-                            <button type="button" class="btn btn-dark" style="color: #FE914B; border-radius: 12px;" data-toggle="modal" data-target="#exampleModal">REGISTRARSE</button>
+                            <button type="submit" class="btn btn-dark" style="color: #FE914B; border-radius: 12px;">REGISTRARSE</button>
                         </div>
                         
                         <!-- Modal -->
-                        <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-                        <div class="modal-dialog" role="document">
-                            <div class="modal-content">
-                            <div class="modal-header">
-                                <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
-                                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                                <span aria-hidden="true">&times;</span>
-                                </button>
-                            </div>
-                            <div class="modal-body">
-                                ...
-                            </div>
-                            <div class="modal-footer">
-                                <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-                                <button type="button" class="btn btn-primary">Save changes</button>
-                            </div>
-                            </div>
-                        </div>
-                        </div>
+ 
                     </div>
                 </div>
             </form>
