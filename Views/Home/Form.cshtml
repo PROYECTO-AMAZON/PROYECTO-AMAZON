@@ -5,7 +5,7 @@
 @model ALUMNO
 
 <div class="text-center">
-    <h1 class="display-4" style="font-weight: 500;">@ViewData["Title"]</h1>
+    <h1 class="display-4" style="font-weight: 500; padding-top: 15px; padding-bottom: 20px;">@ViewData["Title"]</h1>
 </div>
 
 <div class="row">
@@ -14,58 +14,60 @@
     
     <div class="col-10">
 
-        <div style="background-color: #FE914B; border-radius: 15px; padding-bottom: 10px; opacity: 86%;" class="container">
+        <div style="background-color: #FE914B; border-radius: 15px; padding-bottom: 10px; margin-bottom: 25px; opacity: 86%;" class="container">
             <form action="" method="post">
                 <div class="row">
                     <div class="col-6 container" style="padding-top: 15px;">
-                        <div class="form-group">
-                            <label asp-for="nombre">:</label>
+                        <div class="form-group" style="padding-top: 20px; padding-left: 10px;">
+                            <label asp-for="nombre"></label>
                             <input type="text" asp-for="nombre" class="form-control">
                         </div>
-                        <div class="form-group">
-                            <label asp-for="apePat">:</label>
+                        <div class="form-group" style="padding-top: 15px; padding-left: 10px;">
+                            <label asp-for="apePat"></label>
                             <input type="text" asp-for="apePat" class="form-control">
                         </div>
-                        <div class="form-group">
-                            <label asp-for="apeMat">:</label>
+                        <div class="form-group" style="padding-top: 15px; padding-left: 10px;">
+                            <label asp-for="apeMat"></label>
                             <input type="text" asp-for="apeMat" class="form-control">
                         </div>
-                        <div class="form-group">
-                            <label asp-for="fechaNac">:</label>
+                        <div class="form-group" style="padding-top: 15px; padding-left: 10px;">
+                            <label asp-for="fechaNac"></label>
                             <input type="date" asp-for="fechaNac" class="form-control">
                         </div>
-                        <div class="form-group">
-                            <label asp-for="celular">:</label>
+                        <div class="form-group" style="padding-top: 15px; padding-left: 10px;">
+                            <label asp-for="celular"></label>
                             <input type="date" asp-for="celular" class="form-control">
                         </div>
-                        <div class="form-group">
-                            <label asp-for="genero">:</label>
-                            <label><input asp-for="genero" type="radio" name="genero" value="M"> M</label>
-                            <label><input asp-for="genero" type="radio" name="genero" value="F"> F</label>
+                        <div class="form-group" style="padding-top: 15px; padding-bottom: 20px; padding-left: 10px;">
+                            <label asp-for="genero"></label>
+                            <div>
+                                <label><input asp-for="genero" type="radio" name="genero" value="M"> M</label>
+                                <label><input asp-for="genero" type="radio" name="genero" value="F"> F</label>
+                            </div>
                         </div>
                     </div>
                     <div class="col-6 container" style="padding-top: 15px;">
-                        <div class="form-group">
-                            <label asp-for="departamento">:</label>
+                        <div class="form-group" style="padding-top: 20px; padding-right: 10px;">
+                            <label asp-for="departamento"></label>
                             <input type="text" asp-for="departamento" class="form-control">
                         </div>
-                        <div class="form-group">
-                            <label asp-for="provincia">:</label>
+                        <div class="form-group" style="padding-top: 15px; padding-right: 10px;">
+                            <label asp-for="provincia"></label>
                             <input type="text" asp-for="provincia" class="form-control">
                         </div>
-                        <div class="form-group">
-                            <label asp-for="distrito">:</label>
+                        <div class="form-group" style="padding-top: 15px; padding-right: 10px;">
+                            <label asp-for="distrito"></label>
                             <input type="text" asp-for="distrito" class="form-control">
                         </div>
-                        <div class="form-group">
-                            <label asp-for="email">:</label>
+                        <div class="form-group" style="padding-top: 15px; padding-right: 10px;">
+                            <label asp-for="email"></label>
                             <input type="text" asp-for="email" class="form-control">
                         </div>
-                        <div class="form-group">
-                            <label asp-for="contrasena">:</label>
+                        <div class="form-group" style="padding-top: 15px; padding-right: 10px;">
+                            <label asp-for="contrasena"></label>
                             <input type="text" asp-for="contrasena" class="form-control">
                         </div>
-                        <div style="text-align: center;">
+                        <div style="text-align: center; padding-top: 25px;">
                             <a asp-controller="Home" asp-action="Login"><button type="button" class="btn btn-dark" style="color: #FE914B; border-radius: 12px;">REGISTRARSE</button></a>
                         </div>
                     </div>
