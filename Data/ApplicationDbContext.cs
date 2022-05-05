@@ -1,16 +1,13 @@
-using System;
-using System.Collections.Generic;
-using System.Text;
+﻿using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore;
-using PROYECTO_AMAZON.Models;
 
-namespace PROYECTO_AMAZON.Data
+namespace PROYECTO_AMAZON.Data;
+
+public class ApplicationDbContext : IdentityDbContext
 {
-    public class ApplicationDbContext : DbContext
+    public DbSet<ALUMNO> ALUMNOs { get; set; }
+    public ApplicationDbContext(DbContextOptions<ApplicationDbContext> options)
+        : base(options)
     {
-        public DbSet<ALUMNO> ALUMNOs { get; set; }
-        public ApplicationDbContext(DbContextOptions dco) : base(dco) {
-            
-        }
     }
 }

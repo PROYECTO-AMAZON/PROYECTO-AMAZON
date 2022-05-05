@@ -1,3 +1,4 @@
+ 
 html {
   font-size: 14px;
 }
@@ -14,7 +15,9 @@ html {
 }
 
 body {
-  margin-bottom: 60px;
+  margin-bottom: 20px;
+  background: url(../img/fondo.png) no-repeat center;
+  background-size: cover;
 }
 
 .navbar-custom {

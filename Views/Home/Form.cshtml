@@ -4,6 +4,10 @@
 
 @model ALUMNO
 
+@{
+    Layout="_Layout";
+}
+
 <div class="text-center">
     <h1 class="display-4" style="font-weight: 500; padding-top: 15px; padding-bottom: 20px;">@ViewData["Title"]</h1>
 </div>
@@ -15,7 +19,7 @@
     <div class="col-10">
 
         <div style="background-color: #FE914B; border-radius: 15px; padding-bottom: 10px; margin-bottom: 25px; opacity: 86%;" class="container">
-            <form action="" method="post">
+            <form action="" method="">
                 <div class="row">
                     <div class="col-6 container" style="padding-top: 15px;">
                         <div class="form-group" style="padding-top: 20px; padding-left: 10px;">
@@ -68,7 +72,28 @@
                             <input type="text" asp-for="contrasena" class="form-control">
                         </div>
                         <div style="text-align: center; padding-top: 25px;">
-                            <a asp-controller="Home" asp-action="Login"><button type="button" class="btn btn-dark" style="color: #FE914B; border-radius: 12px;">REGISTRARSE</button></a>
+                            <button type="button" class="btn btn-dark" style="color: #FE914B; border-radius: 12px;" data-toggle="modal" data-target="#exampleModal">REGISTRARSE</button>
+                        </div>
+                        
+                        <!-- Modal -->
+                        <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                        <div class="modal-dialog" role="document">
+                            <div class="modal-content">
+                            <div class="modal-header">
+                                <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
+                                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                <span aria-hidden="true">&times;</span>
+                                </button>
+                            </div>
+                            <div class="modal-body">
+                                ...
+                            </div>
+                            <div class="modal-footer">
+                                <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                                <button type="button" class="btn btn-primary">Save changes</button>
+                            </div>
+                            </div>
+                        </div>
                         </div>
                     </div>
                 </div>
