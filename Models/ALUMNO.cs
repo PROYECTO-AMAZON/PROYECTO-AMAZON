@@ -17,7 +17,7 @@ namespace PROYECTO_AMAZON{
         public string apeMat { get; set; }
         [Required(ErrorMessage = "Ingrese su fecha de nacimiento")]
         [Display(Name = "Fecha de Nacimiento")]
-        public DateOnly fechaNac { get; set; }
+        public string fechaNac { get; set; }
         [Required(ErrorMessage = "Ingrese su N° de DNI")]
         [Display(Name = "DNI")]
         public string dni { get; set; }
