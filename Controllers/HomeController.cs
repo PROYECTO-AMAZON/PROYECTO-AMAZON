@@ -35,14 +35,13 @@ public class HomeController : Controller
             var correo = objUsuario.email;
             var password =objUsuario.contrasena;
 
-            var user = new IdentityUser();
-            user.Email = correo;
-            user.UserName = correo;
-
+            var user = new IdentityUser{UserName = correo, Email = correo};
             var result = _um.CreateAsync(user, password).Result;
-
             // Guardar en BD
-            return RedirectToAction("Login");
+             if (result.Succeeded){
+                    return RedirectToAction("Login");
+            }        
+            
         }
 
         return View("Form",objUsuario);
@@ -58,9 +57,9 @@ public class HomeController : Controller
         return View();
     }
     [HttpPost]
-    public IActionResult Login(string correo, string password)
+    public IActionResult Login(string email, string contrasena)
     {
-        var result = _sim.PasswordSignInAsync(correo, password, false, false).Result;
+        var result = _sim.PasswordSignInAsync(email, contrasena, false, false).Result;
 
         if (result.Succeeded) {
             return RedirectToAction("Principal");
@@ -80,7 +79,15 @@ public class HomeController : Controller
 
     public IActionResult Principal()
     {
-        return View();
+        if (User.Identity.IsAuthenticated){
+                ALUMNO objALUMNO=new ALUMNO();
+                objALUMNO= _context.ALUMNOs.Where(m => m.email == User.Identity.Name).FirstOrDefault();
+                var nomUsu=objALUMNO.nombre;
+                objALUMNO.nombre=nomUsu;
+
+                return View("Principal",objALUMNO);
+            }
+            return View();
     }
 
     public IActionResult Privacy()

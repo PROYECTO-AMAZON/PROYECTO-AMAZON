@@ -2,7 +2,15 @@
     ViewData["Title"] = "Inicio";
 }
 
+@model ALUMNO
+
+@if (User.Identity.IsAuthenticated)
+{    <div class="text-center">
+    <div style="text-align: center;"><p style="color: #e7e7e7; margin-top: 15px;">Bienvenido @Model.nombre</p></div>
+    </div>
+}else{    
 <div class="text-center">
     <h1 class="display-4">Welcome</h1>
     <p>Learn about <a href="https://docs.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
 </div>
+}

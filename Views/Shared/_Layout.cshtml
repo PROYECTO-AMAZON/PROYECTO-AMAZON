@@ -4,7 +4,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>@ViewData["Title"] - PROYECTO AMAZON</title>
-    <link rel="icon" href="img/logo.jpg">   
+    <link rel="icon" href="img/logo.jpg"/>   
     <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
     <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
 </head>
@@ -26,7 +26,12 @@
                             <a class="nav-link text-dark" asp-controller="Home" asp-action="Nosotros">¿Quiénes somos?</a>
                         </li>
                     </ul>
-                    <a asp-controller="Home" asp-action="Form"><button type="button" class="btn btn-dark" style="color: #FE914B; border-radius: 12px;">REGISTRARSE</button></a>
+                    @if (User.Identity.IsAuthenticated)
+                    {    
+                        <a asp-controller="Home" asp-action="Logout"><button type="button" class="btn btn-dark" style="color: #FE914B; border-radius: 12px;">CERRAR SESION</button></a>    
+                    }else{    
+                        <a asp-controller="Home" asp-action="Form"><button type="button" class="btn btn-dark" style="color: #FE914B; border-radius: 12px;">REGISTRARSE</button></a>
+                    }
                 </div>
             </div>
         </nav>
