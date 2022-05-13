@@ -15,11 +15,11 @@
             <form method="post">
                 <div class="form-group" style="padding-left: 50px; padding-right: 50px;">
                     <label asp-for="email"></label>
-                    <input type="text" class="form-control">
+                    <input type="text" asp-for="email" class="form-control">
                 </div>
                 <div class="form-group" style="padding-left: 50px; padding-right: 50px; margin-top: 25px;">
                     <label asp-for="contrasena"></label>
-                    <input type="password" class="form-control">
+                    <input type="password" asp-for="contrasena" class="form-control">
                 </div>
                 <div style="text-align: center; padding-top: 10px; padding-bottom: 10px;">
                     <button type="submit" class="btn btn-dark" style="color: #FE914B; border-radius: 12px; margin-top: 20px;">INGRESAR</button>
