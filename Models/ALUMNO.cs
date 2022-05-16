@@ -20,6 +20,8 @@ namespace PROYECTO_AMAZON{
         public string fechaNac { get; set; }
         [Required(ErrorMessage = "Ingrese su N° de DNI")]
         [Display(Name = "DNI")]
+        [StringLength(8, MinimumLength=8, ErrorMessage="Debe ingresar un número minimo de 8 dígitos")]
+        [RegularExpression(@"^([0-9]{8})$", ErrorMessage = "Ingresa un numero valido")]
         public string dni { get; set; }
         [Required(ErrorMessage = "Ingrese su género")]
         [Display(Name = "Género")]
@@ -41,6 +43,7 @@ namespace PROYECTO_AMAZON{
         public string email { get; set; }
         [Required(ErrorMessage = "Ingrese su contraseña")]
         [Display(Name = "Contraseña")]
+        [StringLength(8, MinimumLength=8, ErrorMessage="Debe ingresar un número minimo de 8 caracteres")]
         public string contrasena { get; set; }
     }
 }
