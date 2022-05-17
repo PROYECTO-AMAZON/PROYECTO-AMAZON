@@ -34,17 +34,4 @@ steps:
     azureSubscription: 'Azure for Students Starter(58fab515-086e-4a55-a683-c523b22e480f)'
     appType: 'webApp'
     WebAppName: 'PROYECTO-AMAZON'
-    packageForLinux: '$(System.DefaultWorkingDirectory)/**/*.zip'
-
-- task: SqlAzureDacpacDeployment@1
-  inputs:
-    azureSubscription: 'Azure for Students Starter(58fab515-086e-4a55-a683-c523b22e480f)'
-    AuthenticationType: 'server'
-    ServerName: 'pagweb'
-    DatabaseName: 'paginaweb'
-    SqlUsername: 'AWS'
-    SqlPassword: 'taller-2022'
-    deployType: 'DacpacTask'
-    DeploymentAction: 'Publish'
-    DacpacFile: 'new_dacpac'
-    IpDetectionMethod: 'AutoDetect'
+    package: '$(System.DefaultWorkingDirectory)/**/*.zip'
