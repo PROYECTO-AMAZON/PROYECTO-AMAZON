@@ -2,25 +2,106 @@
     ViewData["Title"] = "Inicio";
 }
 
-@model ALUMNO
-
-@if (User.Identity.IsAuthenticated)
-{    <div class="text-center">
-    <div style="text-align: center;"><p style="color: #e7e7e7; margin-top: 15px;">Bienvenido @Model.nombre</p></div>
-    </div>
-}else{    
-<div class="text-center">
-    <h1 class="display-4">Welcome</h1>
-    <p>Learn about <a href="https://docs.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
-</div>
-}
-
 <div class="row">
     <div class="col">
-        <a asp-controller="Home" asp-action="Form"><button type="button" class="btn btn-dark" style="color: #FE914B; border-radius: 12px;">Agregar nueva carrera</button></a>
+        <a asp-controller="Carrera" asp-action="Index"><button type="button" class="btn btn-warning" style="border-radius: 12px; font-weight: 500;">Agregar Nueva Carrera</button></a>
     </div>
     <div class="col" style="text-align: right;">
-        <a asp-controller="Home" asp-action="Form"><button type="button" class="btn btn-dark" style="color: #FE914B; border-radius: 12px;">Ver Participantes</button></a>
+        <a asp-controller="Home" asp-action="Participantes"><button type="button" class="btn btn-info" style="border-radius: 12px; font-weight: 500;">Ver Participantes</button></a>
     </div>
 </div>
 <hr>
+
+<div class="text-center">
+    <h2 class="display-4" style="font-weight: 500; padding-top: 10px; padding-bottom: 20px;">Relación de Carreras</h2>
+</div>
+<div class="row">
+    <div class="col-6">
+        <div class="card" style="background-color: #F9F3F3; border-radius: 20px; opacity: 86%;">
+            <div class="card-body">
+                <h5 class="card-title" style="text-align: center; font-weight: 700;">Semana 1</h5>
+            </div>
+            <table style="text-align: center; vertical-align: middle;" class="table table-striped table-sm">
+                <thead>
+                    <tr>
+                        <th>Nombres</th>
+                        <th>Ape. Paterno</th>
+                        <th>Fecha</th>
+                        <th>Distancia (en m)</th>
+                        <th>Tiempo (en s)</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Jorge Raí</td>
+                        <td>Campos</td>
+                        <td>15/05/2022</td>
+                        <td>102</td>
+                        <td>58</td>
+                    </tr>
+                    <tr>
+                        <td>Jorge Raí</td>
+                        <td>Campos</td>
+                        <td>15/05/2022</td>
+                        <td>102</td>
+                        <td>58</td>
+                    </tr>
+                </tbody>
+            </table>
+            <div class="card-body">
+                <div class="row">
+                    <div class="col" style="text-align: right;">
+                        <button type="button" class="btn btn-primary" style="border-radius: 12px;">Ver Detalle</button>
+                    </div>
+                    <div class="col" style="text-align: left;">
+                        <button type="button" class="btn btn-warning" style="border-radius: 12px;">Editar</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="col-6">
+        <div class="card" style="background-color: #F9F3F3; border-radius: 20px; opacity: 86%;">
+            <div class="card-body">
+                <h5 class="card-title" style="text-align: center; font-weight: 700;">Semana 2</h5>
+            </div>
+            <table style="text-align: center; vertical-align: middle;" class="table table-striped table-sm">
+                <thead>
+                    <tr>
+                        <th>Nombres</th>
+                        <th>Ape. Paterno</th>
+                        <th>Fecha</th>
+                        <th>Distancia (en m)</th>
+                        <th>Tiempo (en s)</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Jorge Raí</td>
+                        <td>Campos</td>
+                        <td>15/05/2022</td>
+                        <td>102</td>
+                        <td>58</td>
+                    </tr>
+                    <tr>
+                        <td>Jorge Raí</td>
+                        <td>Campos</td>
+                        <td>15/05/2022</td>
+                        <td>102</td>
+                        <td>58</td>
+                    </tr>
+                </tbody>
+            </table>
+            <div class="card-body">
+                <div class="row">
+                    <div class="col" style="text-align: right;">
+                        <button type="button" class="btn btn-primary" style="border-radius: 12px;">Ver Detalle</button>
+                    </div>
+                    <div class="col" style="text-align: left;">
+                        <button type="button" class="btn btn-warning" style="border-radius: 12px;">Editar</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,54 @@
+@{
+    ViewData["Title"] = "Nueva Carrera";
+}
+
+<div class="text-center">
+    <h3 class="display-4" style="font-weight: 500; padding-top: 10px; padding-bottom: 20px;">Ingresa tu Carrera Semanal</h3>
+</div>
+
+<div class="row">
+    
+    <div class="col-1"></div>
+    
+    <div class="col-10">
+
+        <div style="background-color: #FE914B; border-radius: 15px; padding-bottom: 10px; margin-bottom: 25px; opacity: 86%;" class="container">
+            <form action="" method="post">
+                <div class="form-group" style="padding-top: 20px; padding-left: 10px;">
+                    <label>Semana</label>
+                    <select class="form-select">
+                        <option selected>Selecciona la semana</option>
+                        <option value="1">Semana 1</option>
+                        <option value="2">Semana 2</option>
+                        <option value="3">Semana 3</option>
+                    </select>
+                </div>
+                <div class="row">
+                    <div class="col-6 container">
+                        <div class="form-group" style="padding-top: 15px; padding-left: 10px;">
+                            <label>Fecha de la Carrera</label>
+                            <input type="date" class="form-control">
+                        </div>
+                        <div class="form-group" style="padding-top: 15px; padding-bottom: 20px; padding-left: 10px;">
+                            <label>Distancia (en m)</label>
+                            <input type="text" class="form-control">
+                        </div>
+                    </div>
+                    <div class="col-6 container">
+                        <div class="form-group" style="padding-top: 15px; padding-right: 15px;">
+                            <label>Tiempo (en s)</label>
+                            <input type="text" class="form-control">
+                        </div>
+                        <div style="text-align: center; padding-top: 40px;">
+                        <button type="submit" class="btn btn-dark" style="color: #FE914B; border-radius: 12px;">REGISTRAR LA CARRERA</button>
+                    </div>
+                    </div>
+                </div>
+            </form>
+        </div>
+    
+    </div>
+
+    <div class="col-1"></div>
+
+</div>

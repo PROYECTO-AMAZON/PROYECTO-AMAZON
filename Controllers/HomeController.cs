@@ -51,8 +51,16 @@ public class HomeController : Controller
     {
         return View();
     }
+    public IActionResult Participantes()
+    {
+        return View();
+    }
 
     public IActionResult Login()
+    {
+        return View();
+    }
+    public IActionResult Realidad()
     {
         return View();
     }

@@ -7,7 +7,7 @@ namespace PROYECTO_AMAZON{
         [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
         public int id { get; set; }
         [Required(ErrorMessage = "Ingrese su nombre")]
-        [Display(Name = "Nombre")]
+        [Display(Name = "Nombres")]
         public string nombre { get; set; }
         [Required(ErrorMessage = "Ingrese su apellido paterno")]
         [Display(Name = "Apellido Paterno")]
@@ -29,15 +29,6 @@ namespace PROYECTO_AMAZON{
         [Required(ErrorMessage = "Ingrese su N° de celular")]
         [Display(Name = "Celular")]
         public string celular { get; set; }
-        [Required(ErrorMessage = "Ingrese su departamento de residencia")]
-        [Display(Name = "Departamento")]
-        public string departamento { get; set; }
-        [Required(ErrorMessage = "Ingrese su provincia de residencia")]
-        [Display(Name = "Provincia")]
-        public string provincia { get; set; }
-        [Required(ErrorMessage = "Ingrese su distrito de residencia")]
-        [Display(Name = "Distrito")]
-        public string distrito { get; set; }
         [Required(ErrorMessage = "Ingrese su email")]
         [Display(Name = "Email")]
         public string email { get; set; }
