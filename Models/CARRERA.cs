@@ -8,6 +8,9 @@ namespace PROYECTO_AMAZON{
     public class CARRERA{
         [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
         public int id { get; set; }
+        [Required(ErrorMessage = "Ingrese la fecha de la carrera")]
+        [Display(Name = "Fecha de la Carrera")]
+        public string fecCarrera { get; set; }
         public string semana { get; set; }
         [Required(ErrorMessage = "Ingrese su distancia recorrida en metros")]
         [Display(Name = "Distancia (en m)")]
@@ -15,8 +18,6 @@ namespace PROYECTO_AMAZON{
         [Required(ErrorMessage = "Ingrese su tiempo de carrera en segundos")]
         [Display(Name = "Tiempo (en s)")]
         public double tiempo { get; set; }
-        [Required(ErrorMessage = "Ingrese su ritmo")]
-        [Display(Name = "Tiempo (en s)")]
         public int idAlumno { get; set; }
     }
 }
