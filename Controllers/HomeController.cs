@@ -53,7 +53,8 @@ public class HomeController : Controller
     }
     public IActionResult Participantes()
     {
-        return View();
+          var lista=_context.ALUMNOs.ToList();
+            return View(lista);
     }
 
     public IActionResult Login()

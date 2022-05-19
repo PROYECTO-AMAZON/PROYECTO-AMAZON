@@ -1,8 +1,10 @@
+
+
 @{
     ViewData["Title"] = "Participantes de la Carrera";
 }
 
-@model ALUMNO
+@model List<ALUMNO>
 
 <div class="text-center">
     <h2 class="display-4" style="font-weight: 500; padding-top: 10px; padding-bottom: 20px;">Listado de @ViewData["Title"]</h2>
@@ -10,23 +12,29 @@
 
 <div class="container">
     <div class="row">
+        @foreach (var item in Model)
+        {
+            
+        
         <div class="col-4">
             <div class="card" style="background-color: #F9F3F3; border-radius: 20px; opacity: 86%;">
                 <img src="https://images.vexels.com/media/users/3/140789/isolated/lists/27b33c159c670a32cbdd9486a7be9a66-secuencia-de-jogging-hombre-1.png" class="card-img-top" style="width: 250px; padding-top: 15px; padding-left: 30px;">
                 <div class="card-body">
-                    <h5 class="card-title">Jorge Raí</h5><h5 class="card-title">Campos</h5><h5 class="card-title">Pastor</h5>
-                    <p class="card-text">05/11/2000</p>
+                    <h5 class="card-title">@item.nombre</h5><h5 class="card-title">@item.apePat</h5><h5 class="card-title">@item.apeMat</h5>
+                    <p class="card-text">@item.fechaNac</p>
                 </div>
                 <ul class="list-group list-group-flush">
-                    <li class="list-group-item"><label asp-for="dni"></label>: 71629305</li>
-                    <li class="list-group-item"><label asp-for="genero"></label>: M</li>
-                    <li class="list-group-item"><label asp-for="celular"></label>: 959162993</li>
-                    <li class="list-group-item"><label asp-for="email"></label>: jorgeraicampos@hotmail.com</li>
+                    <li class="list-group-item"><label>DNI: </label> @item.dni</li>
+                    <li class="list-group-item"><label>Género: </label> @item.genero</li>
+                    <li class="list-group-item"><label>Celular: </label> @item.celular</li>
+                    <li class="list-group-item"><label>Email: </label> @item.email</li>
                 </ul>
                 <div class="card-body"></div>
             </div>
         </div>
-        <div class="col-4">
+
+        
+        @* <div class="col-4">
             <div class="card" style="background-color: #F9F3F3; border-radius: 20px; opacity: 86%;">
                 <img src="https://images.vexels.com/media/users/3/130583/isolated/preview/6ae5f1b82e82174683b3dc8c8e27cf74-diseno-de-silueta-de-mujer-corriendo.png" class="card-img-top" style="width: 250px; padding-top: 15px; padding-left: 30px;">
                 <div class="card-body">
@@ -57,6 +65,7 @@
                 </ul>
                 <div class="card-body"></div>
             </div>
-        </div>
+        </div> *@
+        }
     </div>
 </div>

@@ -4,6 +4,7 @@ using PROYECTO_AMAZON.Models;
 using PROYECTO_AMAZON.Data;
 using System.Dynamic;
 using Microsoft.AspNetCore.Identity;
+using Microsoft.EntityFrameworkCore;
 
 namespace PROYECTO_AMAZON.Controllers;
 
@@ -51,6 +52,29 @@ public class CarreraController : Controller
     {   
         var lista=_context.CARRERAs.ToList();
             return View(lista);
+    }
+
+    private bool CarreraExists(int id)
+    {
+        return _context.CARRERAs.Any(e => e.id == id);
+    }
+
+    public IActionResult Edit(int id)
+    {
+        CARRERA objCARRERA = _context.CARRERAs.Find(id);
+        if(objCARRERA == null){
+            return NotFound();
+        }
+        return View(objCARRERA);
+    }
+
+    [HttpPost]
+    public IActionResult Edit(int id,CARRERA objCARRERA)
+    {   
+        objCARRERA.nombre_particpante=User.Identity.Name;
+        _context.Update(objCARRERA);
+        _context.SaveChanges();
+        return RedirectToAction(nameof(Principal));
     }
 
     public IActionResult Privacy()
