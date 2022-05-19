@@ -70,7 +70,7 @@ public class HomeController : Controller
         var result = _sim.PasswordSignInAsync(email, contrasena, false, false).Result;
 
         if (result.Succeeded) {
-            return RedirectToAction("Principal");
+            return RedirectToAction("Principal","Carrera");
         } 
 
         ModelState.AddModelError("", " Email y/o contraseña incorrectos");
@@ -85,18 +85,6 @@ public class HomeController : Controller
         return RedirectToAction("Login");
     } 
 
-    public IActionResult Principal()
-    {
-        if (User.Identity.IsAuthenticated){
-                ALUMNO objALUMNO=new ALUMNO();
-                objALUMNO= _context.ALUMNOs.Where(m => m.email == User.Identity.Name).FirstOrDefault();
-                var nomUsu=objALUMNO.nombre;
-                objALUMNO.nombre=nomUsu;
-
-                return View("Principal",objALUMNO);
-            }
-            return View();
-    }
 
     public IActionResult Privacy()
     {

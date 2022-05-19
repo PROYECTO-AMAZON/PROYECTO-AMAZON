@@ -3,6 +3,7 @@ using System;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using PROYECTO_AMAZON.Data;
 
@@ -11,9 +12,10 @@ using PROYECTO_AMAZON.Data;
 namespace PROYECTO_AMAZON.Migrations
 {
     [DbContext(typeof(ApplicationDbContext))]
-    partial class ApplicationDbContextModelSnapshot : ModelSnapshot
+    [Migration("20220519153946_Carrerasssss")]
+    partial class Carrerasssss
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -279,6 +281,9 @@ namespace PROYECTO_AMAZON.Migrations
 
                     SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("id"), 1L, 1);
 
+                    b.Property<int?>("ape_particpanteid")
+                        .HasColumnType("int");
+
                     b.Property<double>("distancia")
                         .HasColumnType("float");
 
@@ -286,9 +291,8 @@ namespace PROYECTO_AMAZON.Migrations
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<string>("nombre_particpante")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
+                    b.Property<int?>("nombre_particpanteid")
+                        .HasColumnType("int");
 
                     b.Property<string>("semana")
                         .IsRequired()
@@ -298,6 +302,10 @@ namespace PROYECTO_AMAZON.Migrations
                         .HasColumnType("float");
 
                     b.HasKey("id");
+
+                    b.HasIndex("ape_particpanteid");
+
+                    b.HasIndex("nombre_particpanteid");
 
                     b.ToTable("CARRERAs");
                 });
@@ -351,6 +359,21 @@ namespace PROYECTO_AMAZON.Migrations
                         .HasForeignKey("UserId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
+                });
+
+            modelBuilder.Entity("PROYECTO_AMAZON.CARRERA", b =>
+                {
+                    b.HasOne("PROYECTO_AMAZON.ALUMNO", "ape_particpante")
+                        .WithMany()
+                        .HasForeignKey("ape_particpanteid");
+
+                    b.HasOne("PROYECTO_AMAZON.ALUMNO", "nombre_particpante")
+                        .WithMany()
+                        .HasForeignKey("nombre_particpanteid");
+
+                    b.Navigation("ape_particpante");
+
+                    b.Navigation("nombre_particpante");
                 });
 #pragma warning restore 612, 618
         }

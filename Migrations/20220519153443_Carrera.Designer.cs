@@ -3,6 +3,7 @@ using System;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using PROYECTO_AMAZON.Data;
 
@@ -11,9 +12,10 @@ using PROYECTO_AMAZON.Data;
 namespace PROYECTO_AMAZON.Migrations
 {
     [DbContext(typeof(ApplicationDbContext))]
-    partial class ApplicationDbContextModelSnapshot : ModelSnapshot
+    [Migration("20220519153443_Carrera")]
+    partial class Carrera
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -283,10 +285,6 @@ namespace PROYECTO_AMAZON.Migrations
                         .HasColumnType("float");
 
                     b.Property<string>("fecCarrera")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<string>("nombre_particpante")
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
