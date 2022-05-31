@@ -51,6 +51,7 @@ public class HomeController : Controller
     {
         return View();
     }
+    
     public IActionResult Participantes()
     {
           var lista=_context.ALUMNOs.ToList();
