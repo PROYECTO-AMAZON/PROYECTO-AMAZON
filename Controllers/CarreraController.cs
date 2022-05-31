@@ -5,6 +5,7 @@ using PROYECTO_AMAZON.Data;
 using System.Dynamic;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
+using System.Net;
 
 namespace PROYECTO_AMAZON.Controllers;
 
@@ -39,7 +40,17 @@ public class CarreraController : Controller
                 // var apeUsu=objALUMNO.apePat;
 
                 objCarrera.nombre_particpante=User.Identity.Name;               
+                
+                var url = "https://functionsaws.azurewebsites.net/api/InsertCarrera?code=gWn0Qf8Y-WvVPSQM7CxKZzzwz-yqwPf3DNon-Oxl3L4AAzFulx2sHA==";
 
+
+
+                using (var httpClient = new HttpClient()){
+
+                var respuesta = httpClient.PostAsJsonAsync(url, objCarrera);
+
+                }
+                
                 _context.Add(objCarrera);
                 _context.SaveChanges();                  
             }      
