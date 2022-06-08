@@ -17,15 +17,18 @@
             
         
         <div class="col-4">
-            <div class="card" style="background-color: #F9F3F3; border-radius: 20px; opacity: 86%; margin-bottom: 10px;">
-                <img src="https://images.vexels.com/media/users/3/140789/isolated/lists/27b33c159c670a32cbdd9486a7be9a66-secuencia-de-jogging-hombre-1.png" class="card-img-top" style="width: 200px; padding-top: 10px; padding-left: 30px;">
+            <div class="card" style="background-color: #F9F3F3; border-radius: 20px; opacity: 86%;">
+                @if(@item.genero=='M'){
+                    <img src="https://bit.ly/3xhAYC7" class="card-img-top" style="width: 250px; padding-top: 15px; padding-left: 30px;">
+                }else{
+                    <img src="https://bit.ly/3trknux" class="card-img-top" style="width: 250px; padding-top: 15px; padding-left: 30px;">
+                }
                 <div class="card-body">
                     <h5 class="card-title">@item.nombre</h5><h5 class="card-title">@item.apePat</h5><h5 class="card-title">@item.apeMat</h5>
                     <p class="card-text">@item.fechaNac</p>
                 </div>
                 <ul class="list-group list-group-flush">
                     <li class="list-group-item"><label>DNI: </label> @item.dni</li>
-                    <li class="list-group-item"><label>Género: </label> @item.genero</li>
                     <li class="list-group-item"><label>Celular: </label> @item.celular</li>
                     <li class="list-group-item"><label>Email: </label> @item.email</li>
                 </ul>
@@ -36,7 +39,7 @@
         
         @* <div class="col-4">
             <div class="card" style="background-color: #F9F3F3; border-radius: 20px; opacity: 86%;">
-                <img src="https://images.vexels.com/media/users/3/130583/isolated/preview/6ae5f1b82e82174683b3dc8c8e27cf74-diseno-de-silueta-de-mujer-corriendo.png" class="card-img-top" style="width: 250px; padding-top: 15px; padding-left: 30px;">
+                <img src="" class="card-img-top" style="width: 250px; padding-top: 15px; padding-left: 30px;">
                 <div class="card-body">
                     <h5 class="card-title">María</h5><h5 class="card-title">García</h5><h5 class="card-title">Pérez</h5>
                     <p class="card-text">21/08/2001</p>
