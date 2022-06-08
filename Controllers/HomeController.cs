@@ -24,6 +24,11 @@ public class HomeController : Controller
         return View();
     }
 
+    public IActionResult Grupo()
+    {
+        return View();
+    }
+
     [HttpPost]
     public IActionResult Form(ALUMNO objUsuario)
     {
